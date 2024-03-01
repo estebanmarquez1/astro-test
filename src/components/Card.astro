@@ -1,5 +1,9 @@
 ---
-const {title} = Astro.props;
+interface Props {
+	title: string,
+	content: string
+}
+const {title, content} = Astro.props;
 ---
 
 <article class="card">
@@ -9,11 +13,7 @@ const {title} = Astro.props;
 		<source srcset="#" type="image/jpeg" />
 		<img src="#" alt="Prueba imagen" />
 	</picture>
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eos
-		maxime officia soluta perferendis magni quisquam nostrum repellendus
-		rerum molestias.
-	</p>
+	<p>{content}</p>
 </article>
 
 <style>
