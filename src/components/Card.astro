@@ -1,9 +1,9 @@
 ---
 interface Props {
-	title: string,
-	content: string
+	title?: string, //? Significa que son opcionales
+	content?: string
 }
-const {title, content} = Astro.props;
+const {title = "Default title", content = "Default content"} = Astro.props;
 ---
 
 <article class="card">
@@ -19,13 +19,12 @@ const {title, content} = Astro.props;
 <style>
 	.card {
 		width: 30rem;
-		border: 3px solid #1b7a1b;
+		border: 3px solid #eaeaea;
 		border-radius: 2rem;
 		padding: 3rem;
 		& h3 {
 			text-align: center;
 			margin: 0;
-			color: #333;
 		}
 		& p {
 			text-wrap: pretty;

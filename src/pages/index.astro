@@ -1,28 +1,27 @@
 ---
+import Layout from "../layouts/Layout.astro";
 //Esto no se ejecuta en el navegador, sólo es para producción.
 const title = "Bienvenidos a mi web";
 const habits = ["Programar", "Escuchar música", "Gimnasio", "Leer", "Estudiar"];
 const isActive = true;
 ---
+<Layout title="Index Astro">
 
-<h1>{title}</h1>
-
-{isActive && <h1>El usuario está activo</h1>}
-<!-- {isActive ? <h1>El usuario está activo</h1> : ''} -->
-<ul>
-	{
-		habits.map((habit) => (
-			<li>
-				<h3>{habit}</h3>
-				<button>Like</button>
-			</li>
-		))
-	}
+	<h1>{title}</h1>
+	
+	{isActive && <h1>El usuario está activo</h1>}
+	<!-- {isActive ? <h1>El usuario está activo</h1> : ''} -->
+	<ul>
+		{
+			habits.map((habit) => (
+				<li>
+					<h3>{habit}</h3>
+					<button>Like</button>
+					</li>
+					))
+				}
 </ul>
 
-<style>
-	body {
-		background-color: #202020;
-		color: wheat;
-	}
-</style>
+
+
+</Layout>

@@ -1,19 +1,15 @@
 ---
 import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
 ---
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards</title>
-</head>
-<body>
+<Layout title='Cards Astro'>
+
     <section class="cards">
         <Card title="Primer título" content="Esta es la primera tarjeta que estoy haciendo para este curso de astro."/>
         <Card title="Segundo título" content="Este podría ser el segundo artículo que estoy haciendo en este curso de astro"/>
         <Card title="Tercer título" content="Esta es la tercera carta"/>
         <Card title="Cuarto título" content="Esta es la última carta"/>
+        <Card/>
     </section>
     
     <style>
@@ -23,6 +19,5 @@ import Card from '../components/Card.astro';
             align-items: center;
             gap: 1.2rem;
         }
-    </style>
-</body>
-</html>
+        </style>
+</Layout>
