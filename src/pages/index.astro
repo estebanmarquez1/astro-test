@@ -5,6 +5,8 @@ const title = "Bienvenidos a mi web";
 const habits = ["Programar", "Escuchar música", "Gimnasio", "Leer", "Estudiar"];
 const isActive = true;
 import Button from "../components/Button.jsx";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 ---
 <Layout title="Index Astro" metaDescription = "Esta es una página inicial para un proyecto de Astro">
 
@@ -25,4 +27,5 @@ import Button from "../components/Button.jsx";
 
 
 	<Button client:visible/> 
+	
 </Layout>
