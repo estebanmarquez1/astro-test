@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 const title = "Bienvenidos a mi web";
 const habits = ["Programar", "Escuchar música", "Gimnasio", "Leer", "Estudiar"];
 const isActive = true;
+import Button from "../components/Button.jsx";
 ---
 <Layout title="Index Astro" metaDescription = "Esta es una página inicial para un proyecto de Astro">
 
@@ -23,5 +24,5 @@ const isActive = true;
 </ul>
 
 
-
+	<Button client:load/>
 </Layout>
